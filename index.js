@@ -2,7 +2,7 @@
 const Telegram = require('telegram-node-bot')
 var app = require('express')();
 
-app.listen(port: process.env.PORT || 3000 , function(){
+app.listen(process.env.PORT || 3000 , function(){
     console.log('Listening on port '); //Listening on port 8888
 });
 
