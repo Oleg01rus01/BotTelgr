@@ -1,9 +1,15 @@
 'use strict'
 const Telegram = require('telegram-node-bot')
 const http = require('http');
+const requestHandler = (request, response) => {
+    console.log(request.url)
+    response.end('Hello Node.js Server!')
+}
+const server = http.createServer(requestHandler)
+
 var server_port = process.env.YOUR_PORT || process.env.PORT || 80;
 var server_host = process.env.YOUR_HOST || '0.0.0.0';
-http.createServer.listen(server_port, server_host, function() {
+server.listen(server_port, server_host, function() {
     console.log('Listening on port %d', server_port);
 });
 
