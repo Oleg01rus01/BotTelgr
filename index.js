@@ -1,10 +1,11 @@
 'use strict'
 const Telegram = require('telegram-node-bot');
+const PORT = process.env.PORT || 3000;
 const TelegramBaseController = Telegram.TelegramBaseController;
 const TextCommand = Telegram.TextCommand;
-const tg = new Telegram.Telegram('644425603:AAFsR-MIvFsv1hKGM8CVZe1YQSDpTW83LUY');
-    
-listen(process.env.PORT || 8080);
+const tg = new Telegram.Telegram('644425603:AAFsR-MIvFsv1hKGM8CVZe1YQSDpTW83LUY'); 
+
+
 	class PingController extends TelegramBaseController {
 		/**
 		 * @param {Scope} $
