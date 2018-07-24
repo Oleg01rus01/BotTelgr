@@ -1,6 +1,6 @@
 'use strict'
 const Telegram = require('telegram-node-bot');
-var https = require('https');
+var https = require('http');
 const TelegramBaseController = Telegram.TelegramBaseController;
 const TextCommand = Telegram.TextCommand;
 const tg = new Telegram.Telegram('644425603:AAFsR-MIvFsv1hKGM8CVZe1YQSDpTW83LUY');
@@ -20,7 +20,7 @@ const tg = new Telegram.Telegram('644425603:AAFsR-MIvFsv1hKGM8CVZe1YQSDpTW83LUY'
 		}
 	}
 	
-https.createServer(function (req, res) {
+http.createServer(function (req, res) {
     res.writeHead(200, { 'Content-Type': 'text/html' });
 	tg.router
 		.when(
