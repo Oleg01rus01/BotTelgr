@@ -2,7 +2,10 @@
 const Telegram = require('telegram-node-bot')
 var app = require('express')();
 
-var listener = app.listen(port: process.env.PORT || 3000 , function(){
+app.listen(port: process.env.PORT || 3000 , function(){
+    console.log('Listening on port '); //Listening on port 8888
+});
+
 	const TelegramBaseController = Telegram.TelegramBaseController;
 	const TextCommand = Telegram.TextCommand;
 	const tg = new Telegram.Telegram('644425603:AAFsR-MIvFsv1hKGM8CVZe1YQSDpTW83LUY'); 
@@ -29,7 +32,5 @@ var listener = app.listen(port: process.env.PORT || 3000 , function(){
 			new TextCommand('/ping', 'pingCommand'),
 			new PingController()
 		);
-});
-
 
 
