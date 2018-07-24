@@ -1,10 +1,10 @@
 'use strict'
 const Telegram = require('telegram-node-bot');
-var https = require('http');
 const TelegramBaseController = Telegram.TelegramBaseController;
 const TextCommand = Telegram.TextCommand;
 const tg = new Telegram.Telegram('644425603:AAFsR-MIvFsv1hKGM8CVZe1YQSDpTW83LUY');
-
+    
+listen(process.env.PORT || 8080);
 	class PingController extends TelegramBaseController {
 		/**
 		 * @param {Scope} $
@@ -20,12 +20,9 @@ const tg = new Telegram.Telegram('644425603:AAFsR-MIvFsv1hKGM8CVZe1YQSDpTW83LUY'
 		}
 	}
 	
-http.createServer(function (req, res) {
-    res.writeHead(200, { 'Content-Type': 'text/html' });
+
 	tg.router
 		.when(
 			new TextCommand('/ping', 'pingCommand'),
 			new PingController()
 		)
-    
-}).listen(process.env.PORT || 3030);
