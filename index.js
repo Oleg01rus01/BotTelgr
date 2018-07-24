@@ -1,6 +1,6 @@
 'use strict'
-const Telegram = require('telegram-node-bot');
-const PORT = process.env.PORT || 3000;
+const Telegram = require('telegram-node-bot')
+const PORT = process.env.PORT || 5000
 const TelegramBaseController = Telegram.TelegramBaseController;
 const TextCommand = Telegram.TextCommand;
 const tg = new Telegram.Telegram('644425603:AAFsR-MIvFsv1hKGM8CVZe1YQSDpTW83LUY'); 
